@@ -1,0 +1,9 @@
+[Trigger]
+Operation = Install
+Operation = Upgrade
+Type = Package
+Target = discord
+[Action]
+Description = Allow open discord even on older version
+When = PostTransaction
+Exec = /usr/bin/bash -c "echo hi discord"
