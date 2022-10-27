@@ -6,4 +6,5 @@ Target = discord
 [Action]
 Description = Allow open discord even on older version
 When = PostTransaction
-Exec = /usr/bin/bash -c "echo hi discord"
+Exec = /usr/bin/bash -c 'echo $( echo checking for discord settings; jq "del(.SKIP_HOST_UPDATE) | . + {"SKIP_HOST_UPDATE": true}" $(getent passwd $SUDO_USER|cut -d: -f6)/Work/discord-hook/settings.json)'
+Depends = jq
