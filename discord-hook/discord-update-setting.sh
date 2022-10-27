@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-JSON_PATH="$(getent passwd $SUDO_USER|cut -d: -f6)/Work/discord-hook/settings.json"
+JSON_PATH="$(getent passwd $SUDO_USER|cut -d: -f6)/.config/discord/settings.json"
 
 
 JQ_EXPRESION='del(.SKIP_HOST_UPDATE) | . + {"SKIP_HOST_UPDATE": true}'
