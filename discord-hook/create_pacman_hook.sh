@@ -4,4 +4,7 @@
 
 DIR_OF_DISCORD_HOOK=$(realpath $(dirname $0))
 
+
+rm /etc/pacman.d/hooks/discord-update-not-in-repository.hook
+
 ln -s $DIR_OF_DISCORD_HOOK/discord-update-not-in-repository.hook /etc/pacman.d/hooks/discord-update-not-in-repository.hook
